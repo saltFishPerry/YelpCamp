@@ -1,0 +1,22 @@
+<% if(success && success.length) {%>
+<!-- так как success это пустой array мы не можем просто написать если есть success, то появится зеленый бокс -НЕТ, вместо этого мы должны проверить есть ли success И одновременно пустой ли он -->
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <%= success %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %> <% if(error && error.length) {%>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%= error %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %>
